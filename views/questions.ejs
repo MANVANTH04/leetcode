@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../public/styles/style.css">
+  <title>Document</title>
+</head>
+<body>
+
+
+<style>
+/* Dark Mode Styling */
+body {
+  background-color: #333;
+  color: #fff;
+}
+
+table {
+  border-color: #444;
+  width: 95%;
+  border-collapse: collapse;
+  margin-top: 50px;
+  margin : 0 auto;
+}
+
+th,
+td {
+  border-color: #444;
+  font-size: 20px;
+  padding: 20px;
+  text-align: left;
+  padding-left: 30px;
+
+}
+
+
+
+tr:nth-child(even) {
+  background-color: #222;
+}
+tr:nth-child(odd) {
+  background-color: #111;
+}
+
+tr:hover {
+  background-color: #333;
+}
+
+td.title a {
+  color: #fff;
+}
+
+td.title a:hover {
+  color: #ccc;
+}
+
+th {
+  background-color: #111 ;
+  opacity: 90%;
+  font-size: 24px;
+  padding: 30px;
+}
+
+</style>
+<div>
+<table>
+  <tr>
+    <th>Title</th>
+    <!-- <th>description</th> -->
+    <th>Acceptance</th>
+    <th>Difficulty</th>
+  </tr>
+  <% for (let i = 0; i<questions.length; i++) { %>
+    <tr <% if (i % 2 === 1) { %>class="even-row"<% } %>>
+      <td><%= questions[i].title %></td>
+      <!-- <td><%= questions[i].description %></td> -->
+      <td><%= questions[i].acceptance %></td>
+      <td><%= questions[i].difficulty %></td>
+    </tr>
+  <% } %>
+
+</table>
+
+</div>
+
+
+
+  
+</body>
+</html>
+  

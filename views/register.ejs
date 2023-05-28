@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTER</title>
+</head>
+<body>
+    <style>
+        body {
+            background-color: #111;
+            color: #fff;
+            
+          }
+          
+          form {
+            background-color: #222;
+            padding: 20px;
+            width: 500px;
+            height: auto;
+            margin : auto;
+           
+          }
+          
+          h1 {
+            font-size: 35px;
+            margin-bottom: 40px;
+            text-align: center;
+          }
+          
+          input[type="text"],
+          input[type="password"] {
+            width: 90%;
+            padding: 20px;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            background-color: #444;
+            color: #fff;
+            border: none;
+            outline: none;
+            font-size: 18px;
+          }
+
+          input[type="text"]:hover,
+            input[type="password"]:hover {
+                background-color: #555;
+            }
+          
+          button {
+            font-size: 18px;
+            width: 100%;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+          }
+          button:hover {
+            background-color: #444;
+          }
+          title {
+            font-size: 35px;
+            margin-bottom: 20px;
+            text-align: center;
+          }
+
+          
+    </style>
+    <form action="/register" method="post" >
+        <h1>REGISTER</h1>
+        <title>USERNAME</title>
+        <input type="text" name="username" placeholder="Username" required>
+        <br>
+        <title>PASSWORD</title>
+        <input type="password" name="password1" placeholder="Password" required>
+        <br>
+        <title>CONFIRM PASSWORD</title>
+        <input type="password" name="password2" placeholder="Confirm Password" required>
+        <br>
+        <button type="submit">Submit </button>
+    </form>
+
+</body>
+</html>
