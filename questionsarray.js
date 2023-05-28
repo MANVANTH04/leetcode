@@ -123,7 +123,37 @@ const questionsarray = () => {
             description : "get the sum of two numbers using ",
             acceptance : "40.0%",
             difficulty : "easy"
-        }
+        },
+        {
+            title : "21. Merge Two Sorted Lists",
+            description : "get the sum of two numbers using ",
+            acceptance : "52.0%",
+            difficulty : "easy"
+        },
+        {
+            title : "22. Generate Parentheses",
+            description : "get the sum of two numbers using ",
+            acceptance : "60.0%",
+            difficulty : "medium"
+        },
+        {
+            title : "23. Merge k Sorted Lists",
+            description : "get the sum of two numbers using ",
+            acceptance : "39.0%",
+            difficulty : "hard"
+        },
+        {
+            title : "24. Swap Nodes in Pairs",
+            description : "get the sum of two numbers using ",
+            acceptance : "50.0%",
+            difficulty : "medium"
+        },
+        {
+            title : "25. Reverse Nodes in k-Group",
+            description : "get the sum of two numbers using ",
+            acceptance : "40.0%",
+            difficulty : "hard"
+        },
     ];
     return questions;
     
