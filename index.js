@@ -56,6 +56,15 @@ app.get('/questions',(req,res)=>{
     res.render('questions',{questions});
 })
 
+app.get('/admin',(req,res)=>{
+    res.render('login');
+})
+
+app.post('/admin',(req,res)=>{  
+    if (req.body.username == 'admin' && req.body.password == 'admin'){
+        res.render('admin');
+    }})
+
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`);
     }
