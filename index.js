@@ -60,6 +60,10 @@ app.get('/admin',(req,res)=>{
     res.render('login');
 })
 
+// in admin post page. we have to check if the username and password are correct. 
+//if they are then we have to render the admin page. else we have to render the 
+//login page again with a flash message saying that the username or password is incorrect.
+
 app.post('/admin',(req,res)=>{  
     if (req.body.username == 'admin' && req.body.password == 'admin'){
         res.render('admin');
