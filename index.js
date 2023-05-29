@@ -6,6 +6,7 @@ import bodyParser from 'body-parser';
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 import questionsarray from './questionsarray.js';
+import { log } from 'console';
 const questions = questionsarray();
 
 
@@ -28,6 +29,12 @@ app.get('/login',(req,res)=>{
 });
 
 app.post('/login',(req,res)=>{
+   if (req.body.username == 'admin' && req.body.password == 'admin'){
+    res.render('admin');
+   }
+   else{
+         app.use(flash("error","username or password incorrect"));
+   }
    res.send('login successful');
    res.render('questions',{questions});
 });
@@ -58,6 +65,7 @@ app.get('/questions',(req,res)=>{
 
 app.get('/admin',(req,res)=>{
     res.render('login');
+    console.log('welcome admin');
 })
 
 // in admin post page. we have to check if the username and password are correct. 
@@ -65,9 +73,13 @@ app.get('/admin',(req,res)=>{
 //login page again with a flash message saying that the username or password is incorrect.
 
 app.post('/admin',(req,res)=>{  
-    if (req.body.username == 'admin' && req.body.password == 'admin'){
-        res.render('admin');
-    }})
+    res.write('welcome admin');
+    res.write(req.body.newquestion);
+    res.write(req.body.difficultylevel);
+    res.write(req.body.submittedpercentage);
+    res.end();
+    res.send();
+})
 
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`);
